@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youselectronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Youselectronics</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#Add Yours">Add Yours</a>
+                <a href="#others">Others</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search articles, projects, and tutorials...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <main class="slider-container">
+        <!-- Electronics & Communication Section -->
+        <section class="slider" id="electronics">
+            <div class="slider-header">
+                <h2>Electronics & Communication Articles</h2>
+                <button class="more-btn" onclick="maximizeSlider('electronics')">More</button>
+            </div>
+            <div class="slider-content">
+                <article class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Article Image">
+                    <h3>Latest in Electronics</h3>
+                    <p>Exploring the newest trends in electronic components and communication technology.</p>
+                </article>
+                <!-- Add more articles here -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="slider" id="projects">
+            <div class="slider-header">
+                <h2>Projects</h2>
+                <button class="more-btn" onclick="maximizeSlider('projects')">More</button>
+            </div>
+            <div class="slider-content">
+                <article class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Project Image">
+                    <h3>Arduino LED Control</h3>
+                    <p>Learn how to control multiple LEDs using Arduino and various sensors.</p>
+                </article>
+                <!-- Add more projects here -->
+                
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="slider" id="education">
+            <div class="slider-header">
+                <h2>Education & Tutorials</h2>
+                <button class="more-btn" onclick="maximizeSlider('education')">More</button>
+            </div>
+            <div class="slider-content">
+                <article class="card" id="rectifier-card" style="cursor:pointer;">
+                    <img src="data/1Ebridge-rectifier.png" alt="Full Wave Bridge Rectifier Circuit" style="display:block;margin:0 auto 1rem;width:180px;">
+                    <h3>1.Full Wave Bridge Rectifier</h3>
+                </article>
+                <article class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Digital Electronics">
+                    <h3>2.Digital Logic Gates</h3>
+                </article>
+                <article class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Microcontrollers">
+                    <h3>3.Introduction to Microcontrollers</h3>
+                </article>
+                <article class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Analog Electronics">
+                    <h3>4.Operational Amplifiers</h3>
+                </article>
+                <article class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Power Electronics">
+                    <h3>5.Power Supply Design</h3>
+                </article>
+                <article class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Communication">
+                    <h3>6.Digital Communication</h3>
+                </article>
+                <!-- Add more tutorials here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Project Details -->
+    <div id="rectifier-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="close-rectifier-modal">&times;</span>
+            <img src="data/1Ebridge-rectifier.png" alt="Full Wave Bridge Rectifier Circuit" style="display:block;margin:0 auto 1rem;width:180px;">
+            <h3>Full Wave Bridge Rectifier</h3>
+            <h4>Project Overview</h4>
+            <p>This project demonstrates how to build a Full-Wave Bridge Rectifier using 4 Diodes. The system converts alternating current (AC) into direct current (DC) using a full-wave bridge rectifier, allowing components like LEDs to operate reliably from AC sources. It solves the polarity issue by ensuring the output voltage remains in the same direction, regardless of the input polarity changes during each AC cycle.</p>
+            <h4>Components and Supplies</h4>
+            <ul>
+                <li>AC source</li>
+                <li>4 x Diodes</li>
+                <li>Wires</li>
+                <li>LED (Output)</li>
+            </ul>
+            <h4>Project Description</h4>
+            <strong>How It Works</strong>
+            <p>The full-wave bridge rectifier converts alternating current (AC) into direct current (DC), enabling safe and consistent power delivery to DC components like LEDs or sensors. The circuit uses four diodes arranged in a bridge configuration to ensure that both halves of the AC cycle contribute to the output, eliminating negative voltage and providing a steady positive output.</p>
+            <strong>Circuit Connection</strong>
+            <img src="data/1Ebridge-rectifier-circuit.png" alt="Full Wave Bridge Rectifier Circuit" style="display:block;margin:0 auto 1rem;width:180px;">
+            <a href="data/Education1.docx" class="download-link" download>
+                <i class="fas fa-download"></i> Download Word Document
+            </a>
+            <!-- You can add more details or diagrams here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
